@@ -690,6 +690,41 @@
     <!-- JavaScript -->
     <script>
         // Mobile Menu Toggle
+<!-- نموذج تسجيل الدخول داخل نفس الصفحة -->
+<div id="login-form">
+  <label for="username">اسم المستخدم:</label>
+  <input type="text" id="username" required><br><br>
+  
+  <label for="password">كلمة المرور:</label>
+  <input type="password" id="password" required><br><br>
+
+  <button onclick="checkLogin()">دخول</button>
+</div>
+
+<div id="admin-section" style="display: none;">
+  <!-- محتوى لوحة التحكم -->
+  <h1>أهلاً بك في لوحة التحكم</h1>
+</div>
+
+<script>
+  function checkLogin() {
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+    
+    // تحقق من اسم المستخدم وكلمة المرور
+    if(username === "admin" && password === "12345") {
+      document.getElementById('login-form').style.display = 'none';
+      document.getElementById('admin-section').style.display = 'block';
+    } else {
+      alert('اسم المستخدم أو كلمة المرور غير صحيحة');
+    }
+  }
+</script>
+
+
+
+
+        
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
         
