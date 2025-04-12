@@ -689,60 +689,6 @@
 
     <!-- JavaScript -->
     <script>
-
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <title>تسجيل الدخول</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="login-form">
-        <h2>تسجيل الدخول</h2>
-        <form id="loginForm">
-            <label for="email">البريد الإلكتروني:</label>
-            <input type="email" id="email" required placeholder="البريد الإلكتروني">
-            <label for="password">كلمة المرور:</label>
-            <input type="password" id="password" required placeholder="كلمة المرور">
-            <button type="submit">دخول</button>
-        </form>
-        <p id="error-message" style="color: red;"></p> <!-- لعرض رسائل الأخطاء -->
-    </div>
-
-    <script>
-        // إضافة التحقق هنا
-        const form = document.getElementById('loginForm');
-        const emailInput = document.getElementById('email');
-        const passwordInput = document.getElementById('password');
-        const errorMessage = document.getElementById('error-message');
-        
-        form.addEventListener('submit', function(event) {
-            event.preventDefault(); // منع إرسال النموذج
-
-            errorMessage.textContent = ''; // إعادة تعيين رسالة الخطأ
-
-            const email = emailInput.value;
-            const password = passwordInput.value;
-
-            if (email === '' || password === '') {
-                errorMessage.textContent = 'يرجى ملء جميع الحقول.';
-            } else {
-                // مثال على عملية التحقق (أضف أي تحقق هنا إذا أردت)
-                if (email === 'user@example.com' && password === 'password123') {
-                    alert('تم تسجيل الدخول بنجاح!');
-                    window.location.href = 'dashboard.html'; // الانتقال إلى لوحة التحكم أو الصفحة الرئيسية
-                } else {
-                    errorMessage.textContent = 'البريد الإلكتروني أو كلمة المرور غير صحيحة.';
-                }
-            }
-        });
-    </script>
-
-</body>
-</html>
-
-        
         // Mobile Menu Toggle
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
